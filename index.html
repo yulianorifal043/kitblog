@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita & Artikel Terkini</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS kustom tambahan jika diperlukan */
+        .article-card:hover .article-image {
+            transform: scale(1.03);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Definisi warna kustom jika soft biru/kuning default Tailwind kurang cocok */
+        /* Anda bisa menambahkan ini jika ingin kontrol warna yang lebih presisi */
+        /*
+        .bg-soft-blue { background-color: #E0F2F7; }
+        .text-soft-blue-dark { color: #4A90E2; }
+        .bg-soft-yellow { background-color: #FFF9C4; }
+        .text-soft-yellow-dark { color: #FBC02D; }
+        */
+    </style>
+</head>
+<body class="bg-blue-50 font-sans leading-normal tracking-normal">
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="#" class="text-2xl font-bold text-blue-700">Nama Situs Berita</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Beranda</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Nasional</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Internasional</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Teknologi</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Gaya Hidup</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Kontak</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 border-t border-gray-200">
+            <ul class="flex flex-col space-y-2 p-4">
+                <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Beranda</a></li>
+                <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Nasional</a></li>
+                <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Internasional</a></li>
+                <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Teknologi</a></li>
+                <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Gaya Hidup</a></li>
+                <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-8 p-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <section class="md:col-span-2">
+            <h2 class="text-3xl font-bold text-blue-700 mb-6">Artikel Terbaru</h2>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden mb-6 article-card">
+                <img src="https://via.placeholder.com/800x450/E0F2F7/4A90E2?text=Gambar+Artikel+1" alt="Gambar Artikel 1" class="w-full h-64 object-cover article-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Judul Artikel yang Menarik dan Panjang Sedikit</h3>
+                    <p class="text-gray-600 text-sm mb-3">Oleh <span class="font-semibold">Penulis Berita</span> | 18 Juni 2025</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Ini adalah ringkasan singkat dari isi artikel. Anda bisa menulis beberapa kalimat di sini untuk memberikan gambaran kepada pembaca tentang apa yang akan mereka temukan di dalam artikel...</p>
+                    <a href="#" class="text-blue-600 hover:underline font-semibold">Baca Selengkapnya &rarr;</a>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden mb-6 article-card">
+                <img src="https://via.placeholder.com/800x450/FFF9C4/FBC02D?text=Gambar+Artikel+2" alt="Gambar Artikel 2" class="w-full h-64 object-cover article-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Inovasi Terbaru dalam Dunia Teknologi yang Mengubah Segalanya</h3>
+                    <p class="text-gray-600 text-sm mb-3">Oleh <span class="font-semibold">Editor Teknologi</span> | 17 Juni 2025</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Deskripsi singkat tentang inovasi terbaru yang sedang menjadi perbincangan. Artikel ini akan membahas dampaknya terhadap kehidupan sehari-hari...</p>
+                    <a href="#" class="text-blue-600 hover:underline font-semibold">Baca Selengkapnya &rarr;</a>
+                </div>
+            </article>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
+                <article class="bg-white rounded-lg shadow-md overflow-hidden article-card">
+                    <img src="https://via.placeholder.com/400x225/E0F2F7/4A90E2?text=Gambar+Artikel+3" alt="Gambar Artikel 3" class="w-full h-40 object-cover article-image">
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-gray-800 mb-1">Tren Gaya Hidup Sehat di Tahun 2025</h4>
+                        <p class="text-gray-600 text-xs mb-2">Oleh <span class="font-semibold">Ahli Gizi</span> | 16 Juni 2025</p>
+                        <p class="text-gray-700 text-sm leading-relaxed">Berbagai tren kesehatan yang populer dan mudah diaplikasikan dalam kehidupan modern...</p>
+                        <a href="#" class="text-blue-600 hover:underline text-sm font-semibold mt-2 block">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden article-card">
+                    <img src="https://via.placeholder.com/400x225/FFF9C4/FBC02D?text=Gambar+Artikel+4" alt="Gambar Artikel 4" class="w-full h-40 object-cover article-image">
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-gray-800 mb-1">Dampak Perubahan Iklim Global Terhadap Lingkungan</h4>
+                        <p class="text-gray-600 text-xs mb-2">Oleh <span class="font-semibold">Pakar Lingkungan</span> | 15 Juni 2025</p>
+                        <p class="text-gray-700 text-sm leading-relaxed">Analisis mendalam mengenai fenomena perubahan iklim dan langkah mitigasinya...</p>
+                        <a href="#" class="text-blue-600 hover:underline text-sm font-semibold mt-2 block">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="flex justify-center mt-8">
+                <a href="#" class="px-4 py-2 mx-1 rounded-lg bg-blue-600 text-white hover:bg-blue-700">1</a>
+                <a href="#" class="px-4 py-2 mx-1 rounded-lg bg-white text-blue-600 border border-blue-600 hover:bg-blue-100">2</a>
+                <a href="#" class="px-4 py-2 mx-1 rounded-lg bg-white text-blue-600 border border-blue-600 hover:bg-blue-100">3</a>
+                <span class="px-4 py-2 mx-1 text-gray-600">...</span>
+                <a href="#" class="px-4 py-2 mx-1 rounded-lg bg-white text-blue-600 border border-blue-600 hover:bg-blue-100">Akhir</a>
+            </div>
+
+        </section>
+
+        <aside class="md:col-span-1">
+            <div class="bg-yellow-100 rounded-lg shadow-md p-6 mb-8 text-center border-2 border-dashed border-yellow-300">
+                <h3 class="text-lg font-semibold text-yellow-800 mb-4">Ruang Iklan Anda</h3>
+                <a href="#" target="_blank">
+                    <img src="https://via.placeholder.com/300x250/FFF9C4/FBC02D?text=Iklan+Banner+Besar" alt="Iklan Banner" class="w-full mx-auto mb-4 rounded-md">
+                </a>
+                <p class="text-yellow-700 text-sm">Promosikan produk atau layanan Anda di sini!</p>
+                <a href="#" class="mt-4 inline-block bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600">Hubungi Kami</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h3 class="text-xl font-bold text-blue-700 mb-4">Artikel Populer</h3>
+                <ul>
+                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">5 Tips Produktivitas Kerja dari Rumah</a>
+                        <p class="text-gray-500 text-sm">2 hari lalu</p>
+                    </li>
+                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Panduan Lengkap Investasi untuk Pemula</a>
+                        <p class="text-gray-500 text-sm">1 minggu lalu</p>
+                    </li>
+                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Destinasi Wisata Tersembunyi di Indonesia</a>
+                        <p class="text-gray-500 text-sm">3 hari lalu</p>
+                    </li>
+                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Resep Masakan Rumahan Praktis dan Lezat</a>
+                        <p class="text-gray-500 text-sm">4 hari lalu</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-blue-100 rounded-lg shadow-md p-4 text-center border-2 border-dashed border-blue-300">
+                <h3 class="text-md font-semibold text-blue-800 mb-2">Space Iklan Kecil</h3>
+                <a href="#" target="_blank">
+                    <img src="https://via.placeholder.com/250x150/E0F2F7/4A90E2?text=Iklan+Sidebar" alt="Iklan Sidebar" class="w-full mx-auto rounded-md">
+                </a>
+                <p class="text-blue-700 text-xs mt-2">Tersedia untuk sponsor!</p>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="bg-blue-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-wrap justify-center md:justify-between items-center mb-6">
+                <div class="w-full md:w-auto mb-4 md:mb-0">
+                    <h4 class="text-xl font-bold mb-2">Nama Situs Berita</h4>
+                    <p class="text-blue-200 text-sm">Sumber terpercaya untuk berita dan artikel terkini.</p>
+                </div>
+                <nav class="w-full md:w-auto">
+                    <ul class="flex flex-wrap justify-center space-x-4">
+                        <li><a href="#" class="text-blue-200 hover:text-white text-sm">Tentang Kami</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white text-sm">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white text-sm">Syarat & Ketentuan</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white text-sm">Peta Situs</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="border-t border-blue-700 pt-6 text-sm text-blue-300">
+                &copy; 2025 Nama Situs Berita. Hak Cipta Dilindungi Undang-Undang.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fungsionalitas untuk mobile menu
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
