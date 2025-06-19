@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berita & Artikel Terkini</title>
+    <title>Ketik Unpad - Berita & Artikel Terkini</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -12,28 +12,25 @@
             transform: scale(1.03);
             transition: transform 0.3s ease-in-out;
         }
-
-        /* Definisi warna kustom jika soft biru/kuning default Tailwind kurang cocok */
-        /* Anda bisa menambahkan ini jika ingin kontrol warna yang lebih presisi */
-        /*
-        .bg-soft-blue { background-color: #E0F2F7; }
-        .text-soft-blue-dark { color: #4A90E2; }
-        .bg-soft-yellow { background-color: #FFF9C4; }
-        .text-soft-yellow-dark { color: #FBC02D; }
-        */
+        .hero-article:hover .hero-image {
+            transform: scale(1.02);
+            transition: transform 0.4s ease-in-out;
+        }
     </style>
 </head>
 <body class="bg-blue-50 font-sans leading-normal tracking-normal">
+
     <header class="bg-white shadow-md py-4">
         <div class="container mx-auto flex justify-between items-center px-4">
-            <a href="#" class="text-2xl font-bold text-blue-700">Nama Situs Berita</a>
+            <a href="#" class="text-3xl font-extrabold text-blue-700">Ketik Unpad</a>
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Beranda</a></li>
                     <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Nasional</a></li>
                     <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Internasional</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Teknologi</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Kampus</a></li>
                     <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Gaya Hidup</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Opini</a></li>
                     <li><a href="#" class="text-gray-600 hover:text-blue-600 font-semibold">Kontak</a></li>
                 </ul>
             </nav>
@@ -46,58 +43,71 @@
                 <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Beranda</a></li>
                 <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Nasional</a></li>
                 <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Internasional</a></li>
-                <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Teknologi</a></li>
+                <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Kampus</a></li>
                 <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Gaya Hidup</a></li>
+                <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Opini</a></li>
                 <li><a href="#" class="block text-gray-600 hover:text-blue-600 font-semibold py-2">Kontak</a></li>
             </ul>
         </div>
     </header>
 
-    <main class="container mx-auto my-8 p-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <main class="container mx-auto my-8 p-4 grid grid-cols-1 lg:grid-cols-4 gap-8">
 
-        <section class="md:col-span-2">
-            <h2 class="text-3xl font-bold text-blue-700 mb-6">Artikel Terbaru</h2>
+        <section class="lg:col-span-3">
+            <h2 class="text-3xl font-bold text-blue-700 mb-6">Berita Utama</h2>
 
-            <article class="bg-white rounded-lg shadow-md overflow-hidden mb-6 article-card">
-                <img src="https://via.placeholder.com/800x450/E0F2F7/4A90E2?text=Gambar+Artikel+1" alt="Gambar Artikel 1" class="w-full h-64 object-cover article-image">
+            <article class="bg-white rounded-lg shadow-md overflow-hidden mb-8 hero-article">
+                <img src="https://images.unsplash.com/photo-1579547631627-8a4f6d4d1e2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQzODd8MHwxfHNlYXJjaHw1fHxuZXdzcGFwZXJ8ZW58MHx8fHwxNzA2NzM1MDA3fDI&ixlib=rb-4.0.3&q=80&w=1080" alt="Mahasiswa Unpad Berprestasi Internasional" class="w-full h-96 object-cover hero-image">
                 <div class="p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Judul Artikel yang Menarik dan Panjang Sedikit</h3>
-                    <p class="text-gray-600 text-sm mb-3">Oleh <span class="font-semibold">Penulis Berita</span> | 18 Juni 2025</p>
-                    <p class="text-gray-700 leading-relaxed mb-4">Ini adalah ringkasan singkat dari isi artikel. Anda bisa menulis beberapa kalimat di sini untuk memberikan gambaran kepada pembaca tentang apa yang akan mereka temukan di dalam artikel...</p>
-                    <a href="#" class="text-blue-600 hover:underline font-semibold">Baca Selengkapnya &rarr;</a>
-                </div>
-            </article>
-
-            <article class="bg-white rounded-lg shadow-md overflow-hidden mb-6 article-card">
-                <img src="https://via.placeholder.com/800x450/FFF9C4/FBC02D?text=Gambar+Artikel+2" alt="Gambar Artikel 2" class="w-full h-64 object-cover article-image">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Inovasi Terbaru dalam Dunia Teknologi yang Mengubah Segalanya</h3>
-                    <p class="text-gray-600 text-sm mb-3">Oleh <span class="font-semibold">Editor Teknologi</span> | 17 Juni 2025</p>
-                    <p class="text-gray-700 leading-relaxed mb-4">Deskripsi singkat tentang inovasi terbaru yang sedang menjadi perbincangan. Artikel ini akan membahas dampaknya terhadap kehidupan sehari-hari...</p>
-                    <a href="#" class="text-blue-600 hover:underline font-semibold">Baca Selengkapnya &rarr;</a>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-3">Mahasiswa Unpad Raih Medali Emas di Ajang Kompetisi Internasional</h3>
+                    <p class="text-gray-600 text-sm mb-4">Oleh <span class="font-semibold text-blue-600">Tim Redaksi Ketik Unpad</span> | 19 Juni 2025</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">Kabar gembira datang dari panggung dunia! Salah satu delegasi mahasiswa Universitas Padjadjaran berhasil mengharumkan nama bangsa dengan meraih medali emas dalam kompetisi sains tingkat internasional...</p>
+                    <a href="#" class="text-blue-600 hover:underline font-semibold text-lg">Baca Berita Selengkapnya &rarr;</a>
                 </div>
             </article>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
-                <article class="bg-white rounded-lg shadow-md overflow-hidden article-card">
-                    <img src="https://via.placeholder.com/400x225/E0F2F7/4A90E2?text=Gambar+Artikel+3" alt="Gambar Artikel 3" class="w-full h-40 object-cover article-image">
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hero-article">
+                    <img src="https://images.unsplash.com/photo-1621255855071-ee7c3f8e5f5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQzODd8MHwxfHNlYXJjaHw1fHxtZWV0aW5nJTIwcm9vbXxlbnwwfHx8fDE3MDY3MzUwMjh8Mg&ixlib=rb-4.0.3&q=80&w=400" alt="Rapat Senat Unpad" class="w-full h-48 object-cover hero-image">
                     <div class="p-4">
-                        <h4 class="text-lg font-bold text-gray-800 mb-1">Tren Gaya Hidup Sehat di Tahun 2025</h4>
-                        <p class="text-gray-600 text-xs mb-2">Oleh <span class="font-semibold">Ahli Gizi</span> | 16 Juni 2025</p>
-                        <p class="text-gray-700 text-sm leading-relaxed">Berbagai tren kesehatan yang populer dan mudah diaplikasikan dalam kehidupan modern...</p>
+                        <h4 class="text-xl font-bold text-gray-800 mb-1">Rapat Senat Akademik Bahas Kurikulum Baru</h4>
+                        <p class="text-gray-600 text-xs mb-2">Oleh <span class="font-semibold text-blue-600">Jurnalis Kampus</span> | 18 Juni 2025</p>
+                        <p class="text-gray-700 text-sm leading-relaxed">Senat Akademik Unpad mengadakan rapat penting untuk membahas implementasi kurikulum terbaru yang akan diterapkan tahun depan...</p>
                         <a href="#" class="text-blue-600 hover:underline text-sm font-semibold mt-2 block">Baca Selengkapnya &rarr;</a>
                     </div>
                 </article>
-                <article class="bg-white rounded-lg shadow-md overflow-hidden article-card">
-                    <img src="https://via.placeholder.com/400x225/FFF9C4/FBC02D?text=Gambar+Artikel+4" alt="Gambar Artikel 4" class="w-full h-40 object-cover article-image">
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hero-article">
+                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQzODd8MHwxfHNlYXJjaHw3fHxwcm9ncmFtbWluZyUyMGNvZGV8ZW58MHx8fHwxNzA2NzM1MDI4fDI&ixlib=rb-4.0.3&q=80&w=400" alt="Inovasi Teknologi Mahasiswa" class="w-full h-48 object-cover hero-image">
                     <div class="p-4">
-                        <h4 class="text-lg font-bold text-gray-800 mb-1">Dampak Perubahan Iklim Global Terhadap Lingkungan</h4>
-                        <p class="text-gray-600 text-xs mb-2">Oleh <span class="font-semibold">Pakar Lingkungan</span> | 15 Juni 2025</p>
-                        <p class="text-gray-700 text-sm leading-relaxed">Analisis mendalam mengenai fenomena perubahan iklim dan langkah mitigasinya...</p>
+                        <h4 class="text-xl font-bold text-gray-800 mb-1">Inovasi Robotik Mahasiswa FMIPA Raih Penghargaan</h4>
+                        <p class="text-gray-600 text-xs mb-2">Oleh <span class="font-semibold text-blue-600">Reporter Teknologi</span> | 17 Juni 2025</p>
+                        <p class="text-gray-700 text-sm leading-relaxed">Tim mahasiswa Fakultas Matematika dan Ilmu Pengetahuan Alam (FMIPA) Unpad berhasil mengembangkan robot inovatif...</p>
                         <a href="#" class="text-blue-600 hover:underline text-sm font-semibold mt-2 block">Baca Selengkapnya &rarr;</a>
                     </div>
                 </article>
             </div>
+
+            <h2 class="text-3xl font-bold text-blue-700 mt-12 mb-6">Artikel Terbaru Lainnya</h2>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden mb-6 article-card flex flex-col sm:flex-row">
+                <img src="https://images.unsplash.com/photo-1517694712202-b0b2e3c0b1e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQzODd8MHwxfHNlYXJjaHwxfHx0ZWFjaGluZyUyMHN0dWRlbnRzfGVufDB8fHx8MTcwNjc1NDU3NXww&ixlib=rb-4.0.3&q=80&w=250" alt="Pengajaran Online" class="w-full sm:w-1/3 h-48 sm:h-auto object-cover article-image">
+                <div class="p-4 sm:p-6 flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Peningkatan Kualitas Pengajaran Hybrid di Unpad</h3>
+                    <p class="text-gray-600 text-sm mb-3">Oleh <span class="font-semibold">Akademisi</span> | 16 Juni 2025</p>
+                    <p class="text-gray-700 leading-relaxed">Strategi terbaru Unpad untuk mengoptimalkan metode pengajaran hybrid demi pengalaman belajar yang lebih baik...</p>
+                    <a href="#" class="text-blue-600 hover:underline font-semibold">Baca Selengkapnya &rarr;</a>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-lg shadow-md overflow-hidden mb-6 article-card flex flex-col sm:flex-row">
+                <img src="https://images.unsplash.com/photo-1542744095-207a9ee085c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQzODd8MHwxfHNlYXJjaHwzfHxlY29ub215fGVufDB8fHx8MTcwNjc1NDQ5Mnww&ixlib=rb-4.0.3&q=80&w=250" alt="Ekonomi Digital" class="w-full sm:w-1/3 h-48 sm:h-auto object-cover article-image">
+                <div class="p-4 sm:p-6 flex-grow">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Peran Mahasiswa dalam Mengembangkan Ekonomi Digital Lokal</h3>
+                    <p class="text-gray-600 text-sm mb-3">Oleh <span class="font-semibold">Mahasiswa FEB</span> | 15 Juni 2025</p>
+                    <p class="text-gray-700 leading-relaxed">Studi kasus tentang kontribusi mahasiswa Unpad dalam memperkuat ekosistem ekonomi digital di sekitar kampus...</p>
+                    <a href="#" class="text-blue-600 hover:underline font-semibold">Baca Selengkapnya &rarr;</a>
+                </div>
+            </article>
 
             <div class="flex justify-center mt-8">
                 <a href="#" class="px-4 py-2 mx-1 rounded-lg bg-blue-600 text-white hover:bg-blue-700">1</a>
@@ -109,14 +119,35 @@
 
         </section>
 
-        <aside class="md:col-span-1">
+        <aside class="lg:col-span-1">
             <div class="bg-yellow-100 rounded-lg shadow-md p-6 mb-8 text-center border-2 border-dashed border-yellow-300">
                 <h3 class="text-lg font-semibold text-yellow-800 mb-4">Ruang Iklan Anda</h3>
                 <a href="#" target="_blank">
-                    <img src="https://via.placeholder.com/300x250/FFF9C4/FBC02D?text=Iklan+Banner+Besar" alt="Iklan Banner" class="w-full mx-auto mb-4 rounded-md">
+                    <img src="https://images.unsplash.com/photo-1549925232-a5e2d6b3c4f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQzODd8MHwxfHNlYXJjaHwyfHxhZHZlcnRpc2VtZW50fGVufDB8fHx8MTcwNjczNTE1MHww&ixlib=rb-4.0.3&q=80&w=300" alt="Iklan Banner" class="w-full mx-auto mb-4 rounded-md">
                 </a>
                 <p class="text-yellow-700 text-sm">Promosikan produk atau layanan Anda di sini!</p>
                 <a href="#" class="mt-4 inline-block bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600">Hubungi Kami</a>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h3 class="text-xl font-bold text-blue-700 mb-4">Kategori Berita</h3>
+                <ul>
+                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Olahraga</a>
+                    </li>
+                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Ekonomi</a>
+                    </li>
+                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Politik</a>
+                    </li>
+                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Seni & Budaya</a>
+                    </li>
+                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
+                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Sosial</a>
+                    </li>
+                </ul>
             </div>
 
             <div class="bg-white rounded-lg shadow-md p-6 mb-8">
@@ -130,21 +161,13 @@
                         <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Panduan Lengkap Investasi untuk Pemula</a>
                         <p class="text-gray-500 text-sm">1 minggu lalu</p>
                     </li>
-                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
-                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Destinasi Wisata Tersembunyi di Indonesia</a>
-                        <p class="text-gray-500 text-sm">3 hari lalu</p>
-                    </li>
-                    <li class="mb-3 pb-3 border-b border-gray-200 last:border-b-0">
-                        <a href="#" class="text-gray-700 hover:text-blue-600 font-semibold text-base">Resep Masakan Rumahan Praktis dan Lezat</a>
-                        <p class="text-gray-500 text-sm">4 hari lalu</p>
-                    </li>
                 </ul>
             </div>
 
             <div class="bg-blue-100 rounded-lg shadow-md p-4 text-center border-2 border-dashed border-blue-300">
                 <h3 class="text-md font-semibold text-blue-800 mb-2">Space Iklan Kecil</h3>
                 <a href="#" target="_blank">
-                    <img src="https://via.placeholder.com/250x150/E0F2F7/4A90E2?text=Iklan+Sidebar" alt="Iklan Sidebar" class="w-full mx-auto rounded-md">
+                    <img src="https://images.unsplash.com/photo-1510931215421-27ee6a666e14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQzODd8MHwxfHNlYXJjaHw1fHxhZHZlcnRpc2VtZW50fGVufDB8fHx8MTcwNjczNTE1MHww&ixlib=rb-4.0.3&q=80&w=250" alt="Iklan Sidebar" class="w-full mx-auto rounded-md">
                 </a>
                 <p class="text-blue-700 text-xs mt-2">Tersedia untuk sponsor!</p>
             </div>
@@ -156,20 +179,20 @@
         <div class="container mx-auto px-4 text-center">
             <div class="flex flex-wrap justify-center md:justify-between items-center mb-6">
                 <div class="w-full md:w-auto mb-4 md:mb-0">
-                    <h4 class="text-xl font-bold mb-2">Nama Situs Berita</h4>
-                    <p class="text-blue-200 text-sm">Sumber terpercaya untuk berita dan artikel terkini.</p>
+                    <h4 class="text-xl font-bold mb-2">Ketik Unpad</h4>
+                    <p class="text-blue-200 text-sm">Berita, Opini, dan Informasi Terkini seputar Unpad.</p>
                 </div>
                 <nav class="w-full md:w-auto">
                     <ul class="flex flex-wrap justify-center space-x-4">
                         <li><a href="#" class="text-blue-200 hover:text-white text-sm">Tentang Kami</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white text-sm">Redaksi</a></li>
                         <li><a href="#" class="text-blue-200 hover:text-white text-sm">Kebijakan Privasi</a></li>
-                        <li><a href="#" class="text-blue-200 hover:text-white text-sm">Syarat & Ketentuan</a></li>
                         <li><a href="#" class="text-blue-200 hover:text-white text-sm">Peta Situs</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="border-t border-blue-700 pt-6 text-sm text-blue-300">
-                &copy; 2025 Nama Situs Berita. Hak Cipta Dilindungi Undang-Undang.
+                &copy; 2025 Ketik Unpad. Hak Cipta Dilindungi Undang-Undang.
             </div>
         </div>
     </footer>
